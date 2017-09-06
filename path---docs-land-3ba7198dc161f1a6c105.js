@@ -1,2 +1,0 @@
-webpackJsonp([42286659795363],{"./node_modules/json-loader/index.js!./.cache/json/docs-land.json":function(a,n){a.exports={data:{markdownRemark:{html:"<p>Lostshard contains a way of protecting land.</p>",frontmatter:{date:"July 12, 2017",path:"/docs/land",title:"Landownership"}}},pathContext:{}}}});
-//# sourceMappingURL=path---docs-land-3ba7198dc161f1a6c105.js.map

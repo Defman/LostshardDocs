@@ -1,2 +1,0 @@
-webpackJsonp([0x7733ec7aff49],{"./node_modules/json-loader/index.js!./.cache/json/docs.json":function(t,o){t.exports={data:{markdownRemark:{html:"<p>test</p>",frontmatter:{date:"July 12, 2017",path:"/docs",title:"My First Gatsby documentation"}}},pathContext:{}}}});
-//# sourceMappingURL=path---docs-a491e049efa05007ab42.js.map
