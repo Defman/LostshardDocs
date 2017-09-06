@@ -1,13 +1,46 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+// import '../css/index.css'; // add some style if you want!
 
-export default IndexPage
+export default function Index({
+  data
+}) {
+  const { edges: docs } = data.allMarkdownRemark;
+  return (
+    <div className="documentations">
+      {docs
+        .filter(doc => doc.node.frontmatter.title.length > 0)
+        .map(({ node: doc }) => {
+          return (
+            <div className="documentation-preview" key={doc.id}>
+              <h1>
+                <Link to={doc.frontmatter.path}>{doc.frontmatter.title}</Link>
+              </h1>
+              <h2>{doc.frontmatter.date}</h2>
+              <p>{doc.excerpt}</p>
+            </div>
+          );
+        })}
+    </div>
+  );
+}
+
+export const pageQuery = graphql`
+  query IndexQuery {
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+      edges {
+        node {
+          excerpt(pruneLength: 250)
+          id
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            path
+          }
+        }
+      }
+    }
+  }
+`;
