@@ -1,67 +1,24 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
-import Helmet from 'react-helmet'
+import { Container } from 'react-responsive-grid'
 
-import './index.css'
+import { rhythm, scale } from '../utils/typography'
 
-class Header extends React.Component {
+class Template extends React.Component {
   render() {
+    const { location, children } = this.props
     return (
-      <div
-        style={{
-          background: 'rebeccapurple',
-          marginBottom: '1.45rem',
-        }}
-      >
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '1.45rem 1.0875rem',
-          }}
-        >
-          <h1 style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                color: 'white',
-                textDecoration: 'none',
-              }}
-            >
-              Gatsby
-            </Link>
-          </h1>
-        </div>
+      <div>
+      {children()}
       </div>
     )
   }
 }
 
-export default class Template extends React.Component {
-  render() {
-
-    return (
-      <div>
-        <Helmet
-          title="Lostshard"
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        />
-        <Header />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {this.props.children()}
-        </div>
-      </div>
-    );
-  }
+Template.propTypes = {
+  children: React.PropTypes.func,
+  location: React.PropTypes.object,
+  route: React.PropTypes.object,
 }
+
+export default Template

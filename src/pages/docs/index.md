@@ -1,7 +1,5 @@
 ---
-path: "/docs"
-date: "2017-07-12T17:12:33.962Z"
-title: "My First Gatsby documentation"
+title: Introduction to Lostshard
+date: "2015-05-28T22:40:32.169Z"
+path: "/docs/landownership"
 ---
-
-test

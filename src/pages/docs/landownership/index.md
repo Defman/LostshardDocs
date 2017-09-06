@@ -1,7 +1,5 @@
 ---
-path: "/docs/land"
-date: "2017-07-12T17:12:33.962Z"
-title: "Landownership"
+title: Introduction to landownership
+date: "2015-05-28T22:40:32.169Z"
+path: "/docs"
 ---
-
-Lostshard contains a way of protecting land.
