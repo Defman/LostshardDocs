@@ -1,0 +1,2 @@
+webpackJsonp([0xf927f8900006],{"./node_modules/json-loader/index.js!./.cache/json/about.json":function(t,o){t.exports={data:{markdownRemark:{html:"<p>Lostshard is a custom RPG minecraft server.</p>",frontmatter:{date:"July 12, 2017",path:"/about",title:"About Lostshard"}}},pathContext:{}}}});
+//# sourceMappingURL=path---about-80051fbfc210bf0eab44.js.map
